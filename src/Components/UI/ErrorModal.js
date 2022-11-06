@@ -1,5 +1,5 @@
 import React from "react";
-import PortalReactDOM from "react-dom";
+import ReactDOM from "react-dom";
 import Button from "./Button";
 import Card from "./Card";
 
@@ -28,11 +28,11 @@ const ModalOverlay = (props) => {
 const ErrorModal = (props) => {
   return (
     <React.Fragment>
-      {PortalReactDOM.createPortal(
+      {ReactDOM.createPortal(
         <Backdrop onError={props.onError} />,
         document.getElementById("backdrop-root")
       )}
-      {PortalReactDOM.createPortal(
+      {ReactDOM.createPortal(
         <ModalOverlay
           eTitle={props.eTitle}
           eMsg={props.eMsg}
